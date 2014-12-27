@@ -15,3 +15,14 @@ Todo:
 - reading map data (the Tiled map format is just XML either gzipped or zlibbed and then Base64'd) & drawing out maps
   - I suggest rapidxml for parsing XML (it's small and just werks)
 - a story would be nice
+
+Story
+------
+I kind of thought of a story its very rough at the moment if you don't like it we can always change it.
+Its kindof based in a legend of zelda style where you have to beat bosses to gain components of something
+which you need to use to fight the final boss. So you're told by your elder( or grandfather or something)
+that to gain fame and fortune you must make a game, and to do this you have to collect three interlocking 
+gems, each one repersenting an element of the game (programming,art,music) to get these you have to fight
+their respective bosses. when you have collected all the gems you take them back to your elder who as it 
+turns out was using you to make the game and intends to steal it for himself, at this point the final boss 
+battle occurs between you and your elder after which the game ends.
