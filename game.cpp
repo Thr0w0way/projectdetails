@@ -1,61 +1,48 @@
+#include"game.hpp"
 
-#include <SFML/Graphics.hpp>
-
-class Game
+void Game::setup()
 {
-	private:
-		sf::RenderWindow *window;
-		sf::Clock *clock;
+	window = new sf::RenderWindow(sf::VideoMode(800, 600), "Untitled");
+	window->setFramerateLimit(60);
 
-	public:
-	void setup()
+	clock = new sf::Clock();
+}
+void Game::loop()
+{
+	int dt = clock->restart().asMilliseconds();
+
+	while (window->isOpen())
 	{
-		window = new sf::RenderWindow(sf::VideoMode(800, 600), "Untitled");
-		window->setFramerateLimit(60);
-
-		clock = new sf::Clock();
+		update(dt);
+		draw();
+		sf::sleep(sf::milliseconds(1));
 	}
-
-	void loop()
+}
+void Game::update(int deltaTime)
+{
+	// parse events
+	sf::Event event;
+	while (window->pollEvent(event))
 	{
-		int dt = clock->restart().asMilliseconds();
-
-		while (window->isOpen())
+		switch (event.type)
 		{
-			update(dt);
-			draw();
-			sf::sleep(sf::milliseconds(1));
-		}
-	}
-
-	void update(int deltaTime)
-	{
-		// parse events
-		sf::Event event;
-
-		while (window->pollEvent(event))
-		{
-			switch (event.type)
-			{
-				case sf::Event::KeyPressed:
-					if ((event.key.code == sf::Keyboard::Escape) || (event.key.code == sf::Keyboard::F4 && event.key.alt))
-						window->close();
-					break;
-				case sf::Event::Closed:
+			case sf::Event::KeyPressed:
+				if ((event.key.code == sf::Keyboard::Escape) || (event.key.code == sf::Keyboard::F4 && event.key.alt))
 					window->close();
-					break;
-			}
+				break;
+			case sf::Event::Closed:
+				window->close();
+				break;
 		}
-
-		//
 	}
+	//
+}
 
-	void draw()
-	{
-		window->clear();
+void Game::draw()
+{
+	window->clear();
 
-		//
+	//
 
-		window->display();
-	}
-};
+	window->display();
+}
