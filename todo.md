@@ -19,6 +19,7 @@ Todo:
 - pick a tileset - for now I'm using this: http://opengameart.org/sites/default/files/Tiles_0.zip just to learn how to properly draw everything
 - rewrite everything eventually to one consistent coding style (mostly just pointer/ref usage, `.` and `->`)
 - ~~a story would be nice~~
+- we need to finalize map details (e.g. the size of the map,etc)
 
 Story
 ------
