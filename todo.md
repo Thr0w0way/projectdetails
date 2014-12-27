@@ -11,8 +11,10 @@ Tools:
 Todo:
 --------
 (in no particular order)
+- check out `isometricdemo.cpp` for a demo on how we can draw the isometric stuff and how to get coordinates from/to the grid or absolute cartesian values
+  - to run the demo edit `main.cpp` to include `isometricdemo.cpp` and replace the line `Game game;` with `IsometricDemo game`
 - ~~main game loop (there's this: https://love2d.org/forums/viewtopic.php?f=4&p=37556#p37442 and this: https://love2d.org/wiki/love.run to draw inspiration from)~~
-- reading map data (the Tiled map format is just XML either gzipped or zlibbed and then Base64'd) & drawing out maps
+- reading map data (the Tiled map format is just XML either gzipped or zlibbed and then Base64'd) ~~& drawing out maps~~
   - I suggest rapidxml for parsing XML (it's small and just werks)
 - pick a tileset - for now I'm using this: http://opengameart.org/sites/default/files/Tiles_0.zip just to learn how to properly draw everything
 - rewrite everything eventually to one consistent coding style (mostly just pointer/ref usage, `.` and `->`)
