@@ -6,6 +6,6 @@ class Tile
 		//reference to sprite from sprite array
 		int sprite;
 		//constructor
-		Tile(int in_sprite);
-}
+		Tile();
+};
 #endif

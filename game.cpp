@@ -2,6 +2,7 @@
 
 void Game::setup()
 {
+	
 	window = new sf::RenderWindow(sf::VideoMode(800, 600), "Untitled");
 	window->setFramerateLimit(60);
 
@@ -41,7 +42,6 @@ void Game::update(int deltaTime)
 void Game::draw()
 {
 	window->clear();
-
 	//
 
 	window->display();

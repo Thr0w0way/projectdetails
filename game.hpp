@@ -2,6 +2,7 @@
 #ifndef GAME_HPP
 #define GAME_HPP
 #include<SFML/Graphics.hpp>
+#include"map.hpp"
 
 class Game
 {
@@ -9,6 +10,8 @@ class Game
 		sf::RenderWindow *window;
 		sf::Clock *clock;
 	public:
+		//game map
+		Map map;
 		void setup();
 		void loop();
 		void update(int deltaTime);
