@@ -10,7 +10,6 @@ void Game::setup()
 	clock = new sf::Clock();
 	//load tile sheet
 	tile_sheet.loadFromFile("assets/gfx/tiles/basic1.png");
-	//treating the single tile in the tiles directory as 1x1 sprite sheet
 	map.load_sprites(&tile_sheet,1,64,64,64,64);
 	
 }

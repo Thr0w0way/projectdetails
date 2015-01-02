@@ -19,7 +19,9 @@ Todo:
 - pick a tileset - for now I'm using this: http://opengameart.org/sites/default/files/Tiles_0.zip just to learn how to properly draw everything
 - rewrite everything eventually to one consistent coding style (mostly just pointer/ref usage, `.` and `->`)
 - ~~a story would be nice~~
-- we need to finalize map details (e.g. the size of the map,etc)
+- ~~map sized finalized 100x100~~
+- flesh out the sprite class
+
 
 Story
 ------
@@ -32,3 +34,4 @@ their respective bosses. when you have collected all the gems you take them back
 turns out was using you to make the game and intends to steal it for himself, at this point the final boss 
 battle occurs between you and your elder after which the game ends.
 - I'm okay with this!
+
