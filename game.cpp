@@ -1,5 +1,6 @@
 #include"game.hpp"
 
+
 void Game::setup()
 {
 	
@@ -7,6 +8,11 @@ void Game::setup()
 	window->setFramerateLimit(60);
 
 	clock = new sf::Clock();
+	//load tile sheet
+	tile_sheet.loadFromFile("assets/gfx/tiles/basic1.png");
+	//treating the single tile in the tiles directory as 1x1 sprite sheet
+	map.load_sprites(&tile_sheet,1,64,64,64,64);
+	
 }
 void Game::loop()
 {
@@ -36,13 +42,13 @@ void Game::update(int deltaTime)
 				break;
 		}
 	}
-	//
 }
 
 void Game::draw()
 {
 	window->clear();
-	//
+	//test draw of sprite from map sprite array
+	window->draw(map.sprites[0]);
 
 	window->display();
 }

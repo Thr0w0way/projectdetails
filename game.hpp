@@ -9,6 +9,8 @@ class Game
 	private:
 		sf::RenderWindow *window;
 		sf::Clock *clock;
+		//tilesheet
+		sf::Texture tile_sheet;
 	public:
 		//game map
 		Map map;

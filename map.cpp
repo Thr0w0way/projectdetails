@@ -15,7 +15,7 @@ int Map::load_sprites(sf::Texture *in_texture,int no_of_sprites,int grid_w,int g
 	int y = 0;
 	if(no_of_sprites > 100)return 0;
 	for(counter = 0;counter < no_of_sprites;counter++){
-		if(x = sheet_w){
+		if(x == sheet_w){
 			x = 0;
 			y += grid_h;
 		}
