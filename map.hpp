@@ -8,7 +8,7 @@ class Map{
 		//2d map
 		Tile map[100][100];
 		//sprite array which tile class references
-		sf::Sprite sprites[100];
+		sf::Sprite sprites[1000];
 		//constructor
 		Map();
 		//method for loading sprites into internal array

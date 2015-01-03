@@ -9,8 +9,8 @@ void Game::setup()
 
 	clock = new sf::Clock();
 	//load tile sheet
-	tile_sheet.loadFromFile("assets/gfx/tiles/basic1.png");
-	map.load_sprites(&tile_sheet,1,64,64,64,64);
+	tile_sheet.loadFromFile("assets/gfx/tiles/chartileset.png");
+	map.load_sprites(&tile_sheet,256,8,8,128,128);
 	
 }
 void Game::loop()
@@ -46,8 +46,18 @@ void Game::update(int deltaTime)
 void Game::draw()
 {
 	window->clear();
-	//test draw of sprite from map sprite array
-	window->draw(map.sprites[0]);
+	//test draw of sprites from map sprite array
+	window->draw(map.sprites[1]);
+	map.sprites[72].setPosition(8,0);
+	window->draw(map.sprites[72]);
+	map.sprites[69].setPosition(16,0);
+	window->draw(map.sprites[69]);
+	map.sprites[76].setPosition(24,0);
+	window->draw(map.sprites[76]);
+	map.sprites[76].setPosition(32,0);
+	window->draw(map.sprites[76]);
+	map.sprites[79].setPosition(40,0);
+	window->draw(map.sprites[79]);
 
 	window->display();
 }
